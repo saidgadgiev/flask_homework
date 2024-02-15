@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Новостной блок</title>
+</head>
+<body>
+<h1>Главные новости</h1>
+<table>
+    {% for new in news %}
+    <tr>
+        <th>
+            <h2>{{ new['title'] }}</h2>
+            <p align="left">{{ new['description'] }}</p>
+            <p align="left" style="color: blue">>{{ new['date'] }}</p>
+        </th>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
