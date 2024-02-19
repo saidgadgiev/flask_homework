@@ -1,0 +1,35 @@
+{%  extends 'base.html' %}
+
+{% block title %} shop {% endblock %}
+
+{% block header %}
+{{ super() }}
+{% endblock %}
+
+{% block nav %}
+{{ super() }}
+{% endblock %}
+
+{% block main %}
+<!--<font size="4" color="#3e7872" face="Times New Roman">-->
+    <br>
+    <div>
+        {% if username %}
+        <h3> Привет {{ username }}, мы рады видеть Вас на нашем сайте ! <br>
+         </h3>
+        {% endif %}
+    </div>
+
+    <div>
+        <form action="{{ url_for('logout') }}" method="GET">
+            <button type="submit" >Выход из сессии (будут удалены cookie)</button>
+        </form>
+
+<!--        name = request.cookies.get('username')-->
+    </div>
+<!--</font>-->
+{% endblock %}
+
+{% block footer %}
+{{ super() }}
+{% endblock %}
